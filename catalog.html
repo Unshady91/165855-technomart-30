@@ -97,64 +97,62 @@
     <!--Основной блок страницы-->
     <section>
       <h2>Перфораторы</h2>
-      <aside>
+      <form method="get" action="https://echo.htmlacademy.ru">
         <h3>Фильтр:</h3>
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Цена:</legend>
-            <label for="volume"></label>
-            <input type="range" name="volume" id="volume" min="0" max="30000" step="10000">
+        <fieldset>
+          <legend>Цена:</legend>
+          <label for="volume"></label>
+          <input type="range" name="volume" id="volume" min="0" max="30000" step="10000">
 
-            <label for="number"></label>
-            <input type="number" name="number" id="number" min="0" max="30000">
-            <p>&mdash</p>
-            <label for="filter-number"></label>
-            <input type="number" name="number" id="filter-number" min="0" max="30000">
-            <!--Оформить в css-->
-          </fieldset>
-          <fieldset>
-            <legend>Производители:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="bosch" id="filter-bosch" checked>
-                <label for="filter-bosch">Bosch</label>
-              </li>
-              <li>
-                <input type="checkbox" name="interskol" id="filter-interskol">
-                <label for="filter-bosch">Интерскол</label>
-              </li>
-              <li>
-                <input type="checkbox" name="makita" id="filter-makita" checked>
-                <label for="filter-makita">Makita</label>
-              </li>
-              <li>
-                <input type="checkbox" name="dewalt" id="filter-dewalt">
-                <label for="filter-dewalt">Dewalt</label>
-              </li>
-              <li>
-                <input type="checkbox" name="hitachi" id="filter-hitachi">
-                <label for="filter-hitachi">Hitachi</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <h3>Питание:</h3>
+          <label for="number"></label>
+          <input type="number" name="number" id="number" min="0" max="30000">
+          <p>&mdash</p>
+          <label for="filter-number"></label>
+          <input type="number" name="number" id="filter-number" min="0" max="30000">
+          <!--Оформить в css-->
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
           <ul>
             <li>
-              <a href="#"></a>
-              <!--Оформление радиокнопок в CSS-->
-              <p>Аккумуляторные</p>
+              <input type="checkbox" name="bosch" id="filter-bosch" checked>
+              <label for="filter-bosch">Bosch</label>
             </li>
             <li>
-              <a href="#"></a>
-              <!--Оформление радиокнопок в CSS-->
-              <p>Сетевые</p>
+              <input type="checkbox" name="interskol" id="filter-interskol">
+              <label for="filter-bosch">Интерскол</label>
+            </li>
+            <li>
+              <input type="checkbox" name="makita" id="filter-makita" checked>
+              <label for="filter-makita">Makita</label>
+            </li>
+            <li>
+              <input type="checkbox" name="dewalt" id="filter-dewalt">
+              <label for="filter-dewalt">Dewalt</label>
+            </li>
+            <li>
+              <input type="checkbox" name="hitachi" id="filter-hitachi">
+              <label for="filter-hitachi">Hitachi</label>
             </li>
           </ul>
-          <button type="submit">Показать</button>
-        </form>
-      </aside>
-      <aside>
+        </fieldset>
+
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="power-type" id="power1" checked>
+              <label for="power1">Аккумуляторные</label>
+            </li>
+            <li>
+              <input type="radio" name="power-type" id="power2">
+              <label for="power2">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
+      <section>
         <h3>Сортировка</h3>
         <ul>
           <li>
@@ -173,7 +171,7 @@
             <a href="#"></a>
           </li>
         </ul>
-      </aside>
+      </section>
     </section>
     <section>
       <h2>Галерея товаров</h2>
