@@ -1,0 +1,163 @@
+
+/*Variables*/
+:root {
+    --basic-red: #EE3643;
+    --basic-extra-blue: #293449;
+    --basic-blue-text: #32425C;
+    --basic-white: #FFFFFF;
+    --basic-green: #63A63E;
+    --basic-orange: #FFBF47;
+    --basic-orange: #FFC047;
+    --basic-blue: #3BBCE3;
+    --basic-pink: #DC91D8;
+    --basic-light-green: #8ED78F;
+    --basic-gray: #A9A9A9;
+    --basic-light-gray: #EAEAEA;
+    --basic-extra-blue: #F1F5F7;
+    --basic-black: #000000;
+
+    background: #FFD180;
+}
+/*Центрование мейна*/
+
+body {
+    min-width: 940px;
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight:400;
+    color: var(--basic-black);
+    background-color: var(--basic-gray);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Шапка сайта*/
+
+/* .user-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    background-color: #293449;
+}
+
+.user-nav {
+    display: flex;
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*Временно для сетки
+    min-height: 47px;
+}
+.user-nav li:first-child {
+   
+    width: 220px;
+
+}
+/*Меню навигация
+.user-nav input {
+    background-color:#293449;
+}
+.user-nav input, textarea {
+    outline: none;
+    border: none;
+}
+
+.logo-block {
+    display: block;
+    background-color: #EE3643;
+    width: 220px;
+    height: 47px;
+}
+.mid-header {
+    display: flex;
+    justify-content: space-between;
+    height: 158px;
+}
+section .left {
+    display: inline-flex;
+    background: #677726;
+   
+}
+section .mid {
+    display: inline-flex;
+    background: #293449;
+}
+section .right {
+    display: inline-flex;
+    background: #939b72;
+}
+*/
+/*Конец шапки сайта*/
+
+/*Подключение шрифтов*/
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 400;
+    font-style: normal;
+    src:
+    url("cuprum.woff2") format("woff2"), 
+    url("cuprum.woff") format("woff");
+    
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    src: 
+    url("fonts/ptsans.woff2") format("woff2"),
+    url("fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: 
+    url("fonts/cuprumbold.woff2") format("woff2"),
+    url("fonts/cuprumbold.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: "PT Sans Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: 
+    url("fonts/ptsansbold.woff2") format("woff2"),
+    url("fonts/ptsansbold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum Italic";
+    font-weight: 400;
+    font-style: italic;
+    src: 
+    url("fonts/cuprumitalic.woff2") format("woff2"),
+    url("fonts/cuprumitalic.woff") format("woff");
+
+}
+
+@font-face {
+    font-family: "Cuprum Bold Italic";
+    font-weight: 700;
+    font-style: italic;
+    src: 
+    url("fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("fonts/cuprumbolditalic.woff") format("woff"); 
+}
+
+
+
+/*Конец раздела подключения шрифтов*/
