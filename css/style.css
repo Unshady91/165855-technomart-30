@@ -1,4 +1,64 @@
 
+/* --------------Подключение шрифтов------------- */
+
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 400;
+    font-style: normal;
+    src:
+    url("../fonts/cuprum.woff2") format("woff2"), 
+    url("../fonts/cuprum.woff") format("woff");
+    
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    src: 
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: 
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: "PT Sans Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: 
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum Italic";
+    font-weight: 400;
+    font-style: italic;
+    src: 
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum Bold Italic";
+    font-weight: 700;
+    font-style: italic;
+    src: 
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff"); 
+}
+
+/*Конец раздела подключения шрифтов*/
+
 /*Variables*/
 
 :root {
@@ -38,7 +98,7 @@ a {
 }
 
 .visually-hidden {
-    position:absolute;
+    position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
@@ -66,10 +126,6 @@ a {
     color: var(--basic-white);
 }
 
-.more-link {
-
-}
-
 /*----------Шапка сайта----------*/
 
 .main-header-logo {
@@ -94,7 +150,7 @@ a {
 }
 
 .nav {
-    list-style:none;
+    list-style: none;
 }
 
 .menu-link {
@@ -167,16 +223,6 @@ a {
 
 /*------------Мейн------------*/
 
-/*----------Центрирование--------*/
-
-/* .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 0;
-} */
-
 /*-----------Баннер-----------*/
 
 .banner {
@@ -189,20 +235,10 @@ a {
     width: 620px;
     height: 266px;
     background-color: var(--basic-gray);
-    background-image: url(../img/slider_picture.jpg) no-repeat;
-    fill: rgba(0, 0, 0, 0.25); 
+    background-image: url("../img/slider_picture.jpg");
 }
 
-.banner-navigation-list:nth-child(4) {
-    width: 620px;
-    height: 266px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.banner-navigation-list:not(:nth-child(4)) {
+.banner-box {
     width: 300px;
     height: 123px;
     font-style: normal;
@@ -217,7 +253,7 @@ a {
     margin-left: 23px;
     padding: 10px;
     text-align: center;
-    background: rgba(225,225,225,0.3);
+    background: rgba(225, 225, 225, 0.3);
     mix-blend-mode: normal;
     text-transform: uppercase;
     color: var(--basic-white);
@@ -231,34 +267,39 @@ a {
     color: var(--basic-white);
 }
 
-.banner-navigation-item:not(:nth-of-type(4)) {
+.banner-box {
     width: 300px;
     height: 123px;
 }
 
-.banner-navigation-item:first-of-type {
+.banner-materials {
     background-color: var(--basic-orange);
-    background-image: url("../img/icons/icon_materials.svg") no-repeat;
+    background-image: url("../img/icons/icon_materials.svg");
+    background-repeat: no-repeat;
 }
 
-.banner-navigation-item:nth-of-type(2) {
+.banner-tool {
     background-color: var(--basic-blue);
-    background-image: url("../img/icons/icon_tool.svg") no-repeat;
+    background-image: url("../img/icons/icon_tool.svg");
+    background-repeat: no-repeat;
 }
 
-.banner-navigation-item:nth-of-type(3) {
+.banner-machines {
     background-color: var(--basic-pink);
-    background-image: url("../img/icons/icon_machines.svg") no-repeat;
+    background-image: url("../img/icons/icon_machines.svg");
+    background-repeat: no-repeat;
 }
 
-.banner-navigation-item:nth-of-type(5) {
+.banner-discounts {
     background-color: var(--basic-light-green);
-    background-image: url("../img/icons/icon_discounts_cart.svg") no-repeat;
+    background-image: url("../img/icons/icon_discounts_cart.svg");
+    background-repeat: no-repeat;
 }
 
-.banner-navigation-item:last-of-type {
+.banner-delivery {
     background-color: var(--basic-orange);
-    background-image: url("../img/icons/icon_delivery.svg") no-repeat;
+    background-image: url("../img/icons/icon_delivery.svg");
+    background-repeat: no-repeat;
 }
 
 .slider-header {
@@ -287,7 +328,6 @@ a {
 /*----------Товары---------*/
 
 .popular-headlines {
-    width: auto;
     height: 89px;
     margin-top: 59px;
     background-color: var(--basic-milk);
@@ -296,7 +336,7 @@ a {
 .products-navigation-item {
     width: 220px;
     height: 318px;
-    border: 1px solid rgba(234,234,234,1);
+    border: 1px solid var(--basic-light-gray);
 }
 
 .products-text {
@@ -322,8 +362,6 @@ a {
     width: 141px;
     height: 38px;
     background-color: var(--basic-red);
-    /* border-radius: 5px;
-    box-shadow: 0, 4px, 4px, 0, 0.25; */
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -337,7 +375,7 @@ a {
 .brands-navigation-item {
     width: 220px;
     height: 145px;
-    border: 1px solid rgba(234,234,234,1);
+    border: 1px solid var(--basic-light-gray);
 }
 
 /* --------Сервисы---------- */
@@ -365,12 +403,6 @@ a {
     font-weight: 24px;
 }
 
-.services-navigation-item:first-of-type .button:active {
-    background-color: var(--basic-white);
-    border: none;
-    color: var(--basic-navy-blue);
-}
-
 .button {
     width: 240px;
     height: 61px;
@@ -392,6 +424,12 @@ a {
     color: var(--basic-white);
 }
 
+.button-delivery:active {
+    background-color: var(--basic-white);
+    border: none;
+    color: var(--basic-navy-blue);
+}
+
 .delivery .headlines {
     font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
@@ -402,7 +440,7 @@ a {
 }
 
 .delivery {
-    background-image: url(../img/delivery.png);
+    background-image: url("../img/delivery.png");
     width: 468px;
     height: 261px;
 }
@@ -421,7 +459,7 @@ a {
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    list-style-image: url(../img/icons/icon_list_marker.png);
+    list-style: none;
 }
 
 /* ------------Footer-------------- */
@@ -442,10 +480,10 @@ a {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-soft-grey);
+    text-decoration: none;
 }
 
-
-.footer-text:not(p):not(address):hover {
+.underlined:hover {
     text-decoration: underline;
 }
 
@@ -481,65 +519,3 @@ a {
 .icon:hover {
     background-color: var(--basic-red);
 }
-/* --------------Подключение шрифтов------------- */
-
-@font-face {
-    font-family: "Cuprum";
-    font-weight: 400;
-    font-style: normal;
-    src:
-    url("../fonts/cuprum.woff2") format("woff2"), 
-    url("../fonts/cuprum.woff") format("woff");
-    
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-weight: 400;
-    font-style: normal;
-    src: 
-    url("../fonts/ptsans.woff2") format("woff2"),
-    url("../fonts/ptsans.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Cuprum Bold";
-    font-weight: 700;
-    font-style: normal;
-    src: 
-    url("../fonts/cuprumbold.woff2") format("woff2"),
-    url("../fonts/cuprumbold.woff") format("woff");
-}
-
-
-@font-face {
-    font-family: "PT Sans Bold";
-    font-weight: 700;
-    font-style: normal;
-    src: 
-    url("../fonts/ptsansbold.woff2") format("woff2"),
-    url("../fonts/ptsansbold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Cuprum Italic";
-    font-weight: 400;
-    font-style: italic;
-    src: 
-    url("../fonts/cuprumitalic.woff2") format("woff2"),
-    url("../fonts/cuprumitalic.woff") format("woff");
-
-}
-
-@font-face {
-    font-family: "Cuprum Bold Italic";
-    font-weight: 700;
-    font-style: italic;
-    src: 
-    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("../fonts/cuprumbolditalic.woff") format("woff"); 
-}
-
-
-
-/*Конец раздела подключения шрифтов*/
