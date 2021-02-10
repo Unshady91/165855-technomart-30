@@ -86,9 +86,6 @@
 /*----Центрование мейна------*/
 
 .page-body {
-    min-width: 940px;
-    margin: 0;
-    padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
     color: var(--basic-black);
 }
@@ -100,14 +97,9 @@ a {
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
 }
 
 /* .new {
-    width: 100px;
-    height: 30px;
     background-color: var(--basic-red);
 }
 .new::after {
@@ -117,8 +109,6 @@ a {
 } */
 
 .more-link {
-    width: 192px;
-    height: 38px;
     background-color: var(--basic-red);
     font-size: 14px;
     line-height: 18px;
@@ -129,8 +119,6 @@ a {
 /*----------Шапка сайта----------*/
 
 .main-header-logo {
-    width: 220px;
-    height: 47px;
     background-color: var(--basic-red);
 }
 
@@ -149,7 +137,9 @@ a {
     background-color: var(--basic-navy-blue);
 }
 
-.nav {
+.clear-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -168,7 +158,7 @@ a {
     color: var(--basic-red);
 }
 
-.info .contact-number {
+.contact-number {
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -209,7 +199,6 @@ a {
 /*Основаная навигация по сайту*/
 
 .main-navigation-wrapper {
-    width: 940px;
     background-color: var(--basic-navy-blue);
 }
 
@@ -225,22 +214,14 @@ a {
 
 /*-----------Баннер-----------*/
 
-.banner {
-    max-width: 940px;
-    height: 1000px;
-}
-
 /* В слайдере картинка "slider_picture.jpg" не подключается! */
 .slider {
-    width: 620px;
-    height: 266px;
     background-color: var(--basic-gray);
     background-image: url("../img/slider_picture.jpg");
+    background-repeat: no-repeat;
 }
 
 .banner-box {
-    width: 300px;
-    height: 123px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -248,10 +229,6 @@ a {
 }
 
 .banner-link {
-    width: 135px;
-    height: 138px;
-    margin-left: 23px;
-    padding: 10px;
     text-align: center;
     background: rgba(225, 225, 225, 0.3);
     mix-blend-mode: normal;
@@ -265,11 +242,6 @@ a {
     font-size: 24px;
     line-height: 30px;
     color: var(--basic-white);
-}
-
-.banner-box {
-    width: 300px;
-    height: 123px;
 }
 
 .banner-materials {
@@ -303,7 +275,6 @@ a {
 }
 
 .slider-header {
-    height: 104px;
     background: rgba(0, 0, 0, 0.25);
     font-family: "Cuprum Bold", Arial, sans-serif;
     font-style: normal;
@@ -328,14 +299,10 @@ a {
 /*----------Товары---------*/
 
 .popular-headlines {
-    height: 89px;
-    margin-top: 59px;
     background-color: var(--basic-milk);
 }
 
 .products-navigation-item {
-    width: 220px;
-    height: 318px;
     border: 1px solid var(--basic-light-gray);
 }
 
@@ -358,9 +325,6 @@ a {
 }
 
 .new-price {
-    display: block;
-    width: 141px;
-    height: 38px;
     background-color: var(--basic-red);
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
@@ -373,16 +337,12 @@ a {
 /*----------Производители---------*/
 
 .brands-navigation-item {
-    width: 220px;
-    height: 145px;
     border: 1px solid var(--basic-light-gray);
 }
 
 /* --------Сервисы---------- */
 
 .services {
-    width: 1200px;
-    height: 522px;
     background-color: var(--basic-soft-grey);    
 }
 
@@ -404,8 +364,6 @@ a {
 }
 
 .button {
-    width: 240px;
-    height: 61px;
     background-color: var(--basic-navy-blue);
     border: none;
     color: var(--basic-white);
@@ -417,8 +375,6 @@ a {
 }
 
 .button:hover {
-    width: 240px;
-    height: 61px;
     background-color: var(--basic-hover-blue);
     border: none;
     color: var(--basic-white);
@@ -441,8 +397,7 @@ a {
 
 .delivery {
     background-image: url("../img/delivery.png");
-    width: 468px;
-    height: 261px;
+    background-repeat: no-repeat;
 }
 
 .abouts .headlines {
@@ -505,17 +460,15 @@ a {
     color: var(--basic-yellow);
 }
 
-.footer-text .footer-phone {
+.footer-phone {
     text-decoration: none;
     color: var(--basic-white);
-    
 }
 
 .icon {
-    width: 44px;
-    height: 44px;
     background-color: var(--basic-dark-blue);
 }
+
 .icon:hover {
     background-color: var(--basic-red);
 }
