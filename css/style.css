@@ -81,6 +81,10 @@
     --basic-light-gray: #EAEAEA;
     --basic-black: #000000;
     --basic-soft-grey: #F1F5F7;
+    --basic-headings-grey: #F2F6F8;
+    --basic-soft-camel: #F7F3EC;
+    --basic-gray-whisper: #E5E5E5;
+    --basic-gray-auth: #C5C5C5;
 }
 
 /*----Центрование мейна------*/
@@ -471,4 +475,208 @@ a {
 
 .icon:hover {
     background-color: var(--basic-red);
+}
+
+/* Конец стилизации главной страницы */
+
+/* Шапка страницы каталога */
+
+.total-items {
+    background-color: var(--basic-red);
+}
+
+/* Пробую к див-блоку подключить две картинки, не работает  */
+
+.user-name {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    background-color: var(--basic-white);
+}
+
+.user-name {
+    background-image: url("../img/icons/icon_logout.svg");
+    background-repeat: no-repeat;
+}
+
+.user-name {
+    background-image: url("../img/icons/icon_user.svg");
+    background-repeat: no-repeat;
+ }
+
+.my-orders,
+.my-account {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-navy-blue);
+}
+
+.my-orders:hover {
+    color: var(--basic-red);
+}
+
+.my-account:hover {
+    color: var(--basic-red);
+}
+
+.user-name:active {
+    color: var(--basic-gray-auth);
+}
+
+.my-orders:active {
+    color: var(--basic-gray-auth);
+}
+
+.my-account:active {
+    color: var(--basic-gray-auth);
+}
+
+/* breadcrumbs */
+
+.breadcrumbs-home {
+    background-image: url("../img/icons/icon_home.svg");
+    background-repeat: no-repeat;
+}
+
+.breadcrumbs {
+     font-family: "PT Sans", Arial, sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 13px;
+     line-height: 18px;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: var(--basic-black);
+ }
+
+ /* Фильтры, сортировка */
+
+.title {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: var(--basic-headings-grey);
+}
+
+.filter-heading,
+.price-range,
+.filter-number,
+.arrangement-heading {
+    background-color: var(--basic-soft-camel);
+}
+
+.heading {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.legend-price,
+.legend-brands,
+.legend-radio {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.filter-tools {
+    font-family: "PT Sans", Arial, sans-serif;  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.filter-button {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    border: 1px solid var(--basic-gray-whisper);
+    background-color: var(--basic-white);
+    text-transform: uppercase;
+}
+
+/* Сортировка  */
+
+.arrangement-item {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-light-gray);
+    text-decoration: underline dotted var(--basic-red);
+}
+
+.arrangement-item:hover {
+    color: var(--basic-black);
+    text-decoration: underline solid var(--basic-red);
+}
+
+.arrangement-item:active {
+    color: var(--basic-red);
+    text-decoration: none;
+}
+
+/* Подключить стрелки "вниз" и "вверх" */
+
+.gallery-item {
+    border: 1px solid var(--basic-light-grey);
+}
+
+/* Пагинация  */
+
+.pagination-link {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    border: 1px solid var(--basic-gray-whisper);
+}
+
+.pagination-current {
+    background-color: var(--basic-red);
+    color: var(--basic-white);
+}
+
+.pagination-link:hover {
+    border: 1px solid var(--basic-gray-auth);
+}
+
+.pagination-link:active {
+    border: 1px solid var(--basic-red);
+}
+
+/* Пара слов о префораторах */
+
+.main-text {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: var(--basic-soft-grey);
 }
