@@ -485,7 +485,6 @@ a {
     background-color: var(--basic-red);
 }
 
-/* Пробую к див-блоку подключить две картинки, не работает  */
 
 .user-name {
     font-family: "Cuprum", Arial, sans-serif;
@@ -494,17 +493,10 @@ a {
     font-size: 21px;
     line-height: 21px;
     background-color: var(--basic-white);
-}
-
-.user-name {
-    background-image: url("../img/icons/icon_logout.svg");
-    background-repeat: no-repeat;
-}
-
-.user-name {
+    color: var(--basic-black);
     background-image: url("../img/icons/icon_user.svg");
     background-repeat: no-repeat;
- }
+}
 
 .my-orders,
 .my-account {
