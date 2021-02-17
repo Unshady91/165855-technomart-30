@@ -545,6 +545,11 @@ a {
 
 /* ------------Footer-------------- */
 
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .bg-top-wrapper {
     background-color: var(--basic-navy-blue);
 }
