@@ -445,6 +445,7 @@ a {
     font-weight: 400;
     font-size: 13px;
     font-weight: 24px;
+    text-transform: initial;
 }
 
 .button {
@@ -579,7 +580,6 @@ a {
     background-color: var(--basic-red);
 }
 
-
 .user-name {
     font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
@@ -645,19 +645,19 @@ a {
 .main-grid-wrapper {
     display: grid;
     grid-template-columns: 220px 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
 }
 
-/* Гридовая сетка для левой колонки фильтров */
-
-.filters-grid-wrapper {
+.filters {
     display: grid;
 }
 
 /* Гридовая сетка для сортировки и галереи карточек */
 
-.arrangement-grid-wrapper {
+.arrangement {
     grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 .gallery-grid-wrapper {
@@ -667,12 +667,6 @@ a {
 .gallery-list {
     display: grid;
     grid-template-columns: repeat(3, 220px);
-    grid-gap: 20px;
-}
-
-.gallery-grid-item {
-    outline: 5px solid var(--basic-navy-blue);
-    outline-offset: -5px;
 }
 
  /* Фильтры, сортировка */
