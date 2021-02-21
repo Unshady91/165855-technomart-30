@@ -173,7 +173,11 @@ a {
 }
 
 .user-navigation-list {
-    grid-template-columns: min-content 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: stretch;
 }
 
 .clear-list {
@@ -645,31 +649,65 @@ a {
 .main-grid-wrapper {
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
-}
-
-.filters {
-    display: grid;
 }
 
 /* Гридовая сетка для сортировки и галереи карточек */
 
-.arrangement {
-    grid-column: 2/3;
-    grid-row: 1/2;
+.content-grid-container {
+    display: grid;
+    grid-template-columns: max-content;
 }
 
-.gallery-grid-wrapper {
-    display: grid;
+/* Сортировка  */
+
+.arrangement-item {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-light-gray);
+    text-decoration: underline dotted var(--basic-red);
+}
+
+.arrangement-item:hover {
+    color: var(--basic-black);
+    text-decoration: underline solid var(--basic-red);
+}
+
+.arrangement-item:active {
+    color: var(--basic-red);
+    text-decoration: none;
+}
+
+.arrangement-wrapper {
+    display: flex;
+    background-color: var(--basic-soft-camel);
+}
+
+/* Подключить стрелки "вниз" и "вверх" */
+
+/* Галерея */
+
+.gallery-item {
+    border: 1px solid var(--basic-light-grey);
 }
 
 .gallery-list {
     display: grid;
     grid-template-columns: repeat(3, 220px);
+    grid-gap: 20px;
 }
 
  /* Фильтры, сортировка */
+
+.filter-heading,
+.price-range,
+.filter-number {
+    background-color: var(--basic-soft-camel);
+}
 
 .title {
     font-family: "Cuprum", Arial, sans-serif;
@@ -679,13 +717,6 @@ a {
     line-height: 30px;
     text-transform: uppercase;
     background-color: var(--basic-headings-grey);
-}
-
-.filter-heading,
-.price-range,
-.filter-number,
-.arrangement-heading {
-    background-color: var(--basic-soft-camel);
 }
 
 .heading {
@@ -727,35 +758,6 @@ a {
     border: 1px solid var(--basic-gray-whisper);
     background-color: var(--basic-white);
     text-transform: uppercase;
-}
-
-/* Сортировка  */
-
-.arrangement-item {
-    font-family: "PT Sans", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--basic-light-gray);
-    text-decoration: underline dotted var(--basic-red);
-}
-
-.arrangement-item:hover {
-    color: var(--basic-black);
-    text-decoration: underline solid var(--basic-red);
-}
-
-.arrangement-item:active {
-    color: var(--basic-red);
-    text-decoration: none;
-}
-
-/* Подключить стрелки "вниз" и "вверх" */
-
-.gallery-item {
-    border: 1px solid var(--basic-light-grey);
 }
 
 /* Пагинация  */
