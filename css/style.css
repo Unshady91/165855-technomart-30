@@ -144,10 +144,6 @@ a {
 
 /*----------Шапка сайта----------*/
 
-.main-header {
-    display: grid;
-}
-
 .main-header-logo {
     background-color: var(--basic-red);
 }
@@ -159,7 +155,6 @@ a {
 
 .search-placeholder::placeholder {
     color: var(--basic-white);
-    
 }
 
 /*----Навигация пользователя----*/
@@ -168,16 +163,11 @@ a {
     background-color: var(--basic-navy-blue);
 }
 
-.user-navigation-wrapper {
-    display: grid;
-}
-
 .user-navigation-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    justify-content: stretch;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .clear-list {
@@ -250,6 +240,12 @@ a {
 
 .main-navigation-wrapper {
     background-color: var(--basic-navy-blue);
+}
+
+.main-navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .main-navigation-item:hover {
@@ -365,9 +361,17 @@ a {
 /*----------Товары---------*/
 
 .headlines-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--basic-milk);
+    width: 100%;
     margin-top: 59px;
     margin-bottom: 20px;
+}
+
+.popular-headlines {
+    text-transform: uppercase;
 }
 
 .products-navigation-list {
@@ -432,7 +436,11 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    outline: 5px solid rgba(225, 225, 225, 0.3);
+    outline-offset: -5px;
 }
+
+.delivery-bg-content
 
 .services-headlines {
     font-family: "Cuprum", Arial, sans-serif;
@@ -484,9 +492,10 @@ a {
     color: var(--basic-navy-blue);
 }
 
-.delivery {
+.delivery-content-bg {
     background-image: url("../img/delivery.png");
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .abouts .headlines {
@@ -512,7 +521,12 @@ a {
     margin-top: 70px;
     margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 300px;
+}
+
+.feedback-link {
+    display: flex;
+    align-self: center;
 }
 
 /* ------------Footer-------------- */
@@ -528,6 +542,30 @@ a {
 
 .bg-bot-wrapper {
     background-color: var(--basic-hover-blue);
+}
+
+.top-navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.bot-navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.public-navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-feedback-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer-text,
