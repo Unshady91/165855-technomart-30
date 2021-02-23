@@ -165,7 +165,6 @@ a {
 
 .user-navigation-list {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -244,7 +243,6 @@ a {
 
 .main-navigation-list {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 
@@ -546,26 +544,26 @@ a {
 
 .top-navigation-list {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
 }
 
 .bot-navigation-list {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
+}
+
+.bot-col2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .public-navigation-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .footer-feedback-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .footer-text,
@@ -682,6 +680,11 @@ a {
      color: var(--basic-black);
  }
 
+.breadcrumbs-list {
+    display: flex;
+    justify-content: flex-start;
+}
+
 /* Главная гридовая сетка объединяющая фильтры и галерею карточек */
 
 .main-grid-wrapper {
@@ -723,6 +726,17 @@ a {
 .arrangement-wrapper {
     display: flex;
     background-color: var(--basic-soft-camel);
+}
+
+.arrangement-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrangement-list {
+    display: flex;
 }
 
 /* Подключить стрелки "вниз" и "вверх" */
@@ -822,6 +836,10 @@ a {
 
 .pagination-link:active {
     border: 1px solid var(--basic-red);
+}
+
+.gallery-pagination {
+    display: flex;
 }
 
 /* Пара слов о префораторах */
