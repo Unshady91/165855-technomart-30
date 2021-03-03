@@ -23,7 +23,10 @@
               <a class="main-header-logo" href="#">
                 <img src="img/logo/logo_technomart.svg" width="108" height="18" alt="Логотип Техномарт">
               </a>
-              <!-- <img class="icon-search" src="img/icons/icon_search.svg" width="17" height="17" alt="Поиск"> -->
+              <span class="visually-hidden">Поиск</span>
+              <svg class="icon-search" width="17" height="17" viewBox="0 0 17 17">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                </svg>
               <input class="search-placeholder" type="search" placeholder="Поиск:">
             </div>
             <ul class="user-navigation-list clear-list">
@@ -49,12 +52,16 @@
             <p class="info-text">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
           </div>
           <div class="contacts-wrapper">
-            <!-- <img src="img/icons/icon_phone_number.svg" width="18" height="19" alt="Поиск"> -->
             <a class="contacts-number" href="tel:+78125550505">+7 (812) 555-05-55</a>
             <address class="contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <div class="auth-wrapper">
             <a class="login-link" href="">Войти</a>
+            <span class="visually-hidden">Войти</span>
+            <svg class="icon-login" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+              <path d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z" fill="#C5C5C5"/>
+              </svg>
             <a class="registration-link" href="">Регистрация</a>
           </div>
         </div>
@@ -99,7 +106,7 @@
         <nav class="banner-navigation">
           <ul class="banner-navigation-list clear-list">
             <li class="banner-box banner-materials">
-              <div class="banner-wrapper">
+              <div class="banner-wrapper new">
                 <h3 class="banner-heading">Материалы</h3>
                 <a class="banner-link" href="#">На любой вкус</a>
               </div>
@@ -148,33 +155,61 @@
         <ul class="products-navigation-list clear-list">
           <li class="products-navigation-item">
             <h3 class="products-text">Перфоратор Bosch BFG 9000</h3>
-            <div class="products-image-wrapper">
-              <img src="img/products/Bosch_BFG_9000.jpg" width="184" height="164" alt="Перфоратор Bosch Bosch-BFG-9000">
+            <div class="products-general-wrapper">
+              <div class="products-image-wrapper">
+                <img src="img/products/Bosch_BFG_9000.jpg" width="184" height="164"
+                  alt="Перфоратор Bosch Bosch-BFG-9000">
+              </div>
+              <div class="purchase-form">
+                <a class="products-link purchase-link" href="#">Купить</a>
+                <a class="products-link suspend-link" href="#">В закладки</a>
+              </div>
             </div>
             <del class="old-price">32500 P.</del>
             <a class="new-price" href="#">25500 P.</a>
           </li>
           <li class="products-navigation-item new">
             <h3 class="products-text">Перфоратор Bosch BFG 3000</h3>
-            <div class="products-image-wrapper">
-              <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112" alt="Перфоратор Bosch-BFG-3000">
-            </div>
+            <div class="products-general-wrapper">
+                <div class="products-image-wrapper">
+                  <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112"
+                    alt="Перфоратор Bosch Bosch-BFG-3000">
+                </div>
+                <div class="purchase-form">
+                  <a class="products-link purchase-link" href="#">Купить</a>
+                  <a class="products-link suspend-link" href="#">В закладки</a>
+                </div>
+              </div>
             <del class="old-price">22500 P.</del>
             <a class="new-price" href="#">15500 P.</a>
           </li>
           <li class="products-navigation-item">
             <h3 class="products-text">Перфоратор Bosch BFG 6000</h3>
-            <div class="products-image-wrapper">
-              <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128" alt="Перфоратор Bosch-BFG-6000">
-            </div>
+            <div class="products-general-wrapper">
+                <div class="products-image-wrapper">
+                  <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                    alt="Перфоратор Bosch Bosch-BFG-6000">
+                </div>
+                <div class="purchase-form">
+                  <a class="products-link purchase-link" href="#">Купить</a>
+                  <a class="products-link suspend-link" href="#">В закладки</a>
+                </div>
+              </div>
             <del class="old-price">30500 P.</del>
             <a class="new-price" href="#">25500 P.</a>
           </li>
           <li class="products-navigation-item new">
             <h3 class="products-text">Перфоратор Bosch BFG 2000</h3>
-            <div class="products-image-wrapper">
-              <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112" alt="Перфоратор Bosch-BFG-2000">
-            </div>
+            <div class="products-general-wrapper">
+                <div class="products-image-wrapper">
+                  <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112"
+                    alt="Перфоратор Bosch Bosch-BFG-2000">
+                </div>
+                <div class="purchase-form">
+                  <a class="products-link purchase-link" href="#">Купить</a>
+                  <a class="products-link suspend-link" href="#">В закладки</a>
+                </div>
+              </div>
             <del class="old-price">22500 P.</del>
             <a class="new-price" href="#">12500 P.</a>
           </li>
@@ -369,7 +404,7 @@
             <div class="bot-col2">
               <ul class="public-navigation-list clear-list">
                 <li class="public-navigation-item">
-                  <a class="icon" href="#">
+                  <a class="icon vk-icon" href="#">
                     <img src="img/icons/icon_vk.svg" width="26" height="15" alt="Иконка Вконтакте">
                   </a>
                 </li>
