@@ -64,6 +64,33 @@
       </div>
     </section>
 
+    <section>
+      <h2 class="visually-hidden">Товар добавлен в корзину!</h2>
+        <div class="cart-items-form">
+          <div class="cart-top-wrapper">
+            <svg class="popup_close" width="21" height="21" viewBox="0 0 21 21" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.2729 10.5L20.6949 3.07799C21.0839 2.68899 21.0839 2.05299 20.6949 1.66399L19.3359 0.304995C18.9469 -0.0840054 18.3109 -0.0840054 17.9219 0.304995L10.4999 7.72699L3.07793 0.304995C2.68893 -0.0840054 2.05293 -0.0840054 1.66393 0.304995L0.304934 1.66399C-0.0840664 2.05299 -0.0840664 2.68899 0.304934 3.07799L7.72693 10.5L0.305934 17.922C-0.0830664 18.311 -0.0830664 18.947 0.305934 19.336L1.66493 20.695C2.05393 21.084 2.68993 21.084 3.07893 20.695L10.5009 13.273L17.9229 20.695C18.3119 21.084 18.9479 21.084 19.3369 20.695L20.6959 19.336C21.0849 18.947 21.0849 18.311 20.6959 17.922L13.2729 10.5Z"
+                fill="#EE3643" />
+            </svg>
+            <div class="cart-container">
+              <div class="title-wrapper">
+                <p class="cart-title">Товар добавлен в корзину!</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart-bot-wrapper">
+            <div class="cart-container">
+              <div class="buttons-wrapper">
+                <button class="cart-submit-link cart-submit" type="button">Оформить заказ</button>
+                <a class="shop-link shop-button" href="#">Продолжить покупки</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
     <div class="info-bg-container">
       <section class="main-info">
         <h2 class="visually-hidden">Вход и регистрация</h2>
@@ -71,7 +98,7 @@
           <div class="info-text-wrapper">
             <p class="info-text">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
           </div>
-          <div class="contacts-wrapper">
+          <div class="contacts-wrapper inner-contacts-wrapper">
             <a class="contacts-number" href="tel:+78125550505">+7 (812) 555-05-55</a>
             <address class="contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
@@ -82,15 +109,15 @@
                 <path
                   d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" />
               </svg>
-              <svg class="icon-logout" width="20" height="17" viewBox="0 0 20 17" fill="none"
+            </a>
+            <svg class="icon-logout" width="20" height="17" viewBox="0 0 20 17" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" />
                 <path
                   d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z" />
               </svg>
-            </a>
-              <a class="my-orders" href="#">Мои заказы</a>
-              <a class="my-account" href="#">Личный кабинет</a>
+            <a class="my-orders" href="#">Мои заказы</a>
+            <a class="my-account" href="#">Личный кабинет</a>
           </div>
         </div>
       </section>
@@ -132,10 +159,12 @@
       <ul class="breadcrumbs-list clear-list">
         <li>
           <a class="breadcrumbs-home" href="index.html">
-            <svg class="icon-home" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z"/>
-              <path d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"/>
-              </svg>
+            <svg class="icon-home" width="14" height="12" viewBox="0 0 14 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" />
+              <path
+                d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z" />
+            </svg>
           </a>
         </li>
         <li class="breadcrumbs-item">
@@ -156,63 +185,89 @@
           <div class="filters-grid-wrapper">
             <h3 class="filter-heading heading">Фильтр:</h3>
             <form method="get" action="https://echo.htmlacademy.ru">
-              <fieldset class="filter-item">
-                <legend class="legend legend-price">Цена:</legend>
+              <fieldset class="filter-item filter-range">
+                <legend>Цена:</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
                       <div class="bar"></div>
                     </div>
-                    <div class="toggle toggle-min"></div>
-                    <div class="toggle toggle-max"></div>
+                    <div class="toggle toggle-min tabindex='0'"></div>
+                    <div class="toggle toggle-max tabindex='0'"></div>
                   </div>
                   <div class="price-controls">
                     <label class="min-price">
-                      от <input type="number" name="min-price" value="0">
+                      <input type="number" name="min-price" value="0">
                     </label>
                     <label class="max-price">
-                      до <input type="number" name="max-price" value="15000">
+                      <input type="number" name="max-price" value="30000">
                     </label>
                   </div>
                 </div>
+                <div class="fieldset-slasher range-slasher"></div>
               </fieldset>
 
-              <fieldset class="filter-item">
-                <legend class="legend-brands">Производители:</legend>
+              <fieldset class="filter-item filter-brands">
+                <legend>Производители:</legend>
                 <ul class="brands-list clear-list">
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
-                    <label class="label-bosch filter-tools" for="filter-bosch">Bosch</label>
+                    <label>
+                      <input class="input-checkbox visually-hidden" type="checkbox" checked>
+                      <span class="checkbox check"></span>
+                      Bosch
+                    </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
-                    <label class="label-bosch filter-tools" for="filter-bosch">Интерскол</label>
+                    <label>
+                      <input class="input-checkbox visually-hidden" type="checkbox">
+                      <span class="checkbox check"></span>
+                      Интерскол
+                    </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
-                    <label class="label-makita  filter-tools" for="filter-makita">Makita</label>
+                    <label>
+                      <input class="input-checkbox visually-hidden" type="checkbox" checked>
+                      <span class="checkbox check"></span>
+                      Makita
+                    </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
-                    <label class="label-dewalt filter-tools" for="filter-dewalt">Dewalt</label>
+                    <label>
+                      <input class="input-checkbox visually-hidden" type="checkbox">
+                      <span class="checkbox check"></span>
+                      Dewalt
+                    </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
-                    <label class="label-hitachi filter-tools" for="filter-hitachi">Hitachi</label>
+                    <label>
+                      <input class="input-checkbox visually-hidden" type="checkbox">
+                      <span class="checkbox check"></span>
+                      Hitachi
+                    </label>
                   </li>
                 </ul>
+                <div class="fieldset-slasher brands-slasher"></div>
               </fieldset>
-
-              <fieldset class="filter-item" >
-                <legend class="legend-radio">Питание:</legend>
+              <fieldset class="filter-item filter-power">
+                <legend>Питание:</legend>
                 <ul class="radio-list clear-list">
                   <li>
-                    <input class="input-radio " type="radio" name="power-type" id="power1" checked>
-                    <label class="label-power1 filter-tools" for="power1">Аккумуляторные</label>
+                    <label>
+                      <input class="input-radio visually-hidden" type="radio">
+                      <span class="radio-icon">
+                        <span class="radio-on"></span>
+                      </span>
+                      Аккумуляторные
+                    </label>
                   </li>
                   <li>
-                    <input class="input-radio" type="radio" name="power-type" id="power2">
-                    <label class="label-power2 filter-tools" for="power2">Сетевые</label>
+                    <label>
+                      <input class="input-radio visually-hidden" type="radio">
+                      <span class="radio-icon">
+                        <span class="radio-on"></span>
+                      </span>
+                      Сетевые
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -237,14 +292,16 @@
                 </li>
                 <li>
                   <a class="triangle-nav" href="#">
-                    <svg class="triangle-up" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.66235 0L11.1624 10L0.162354 10"/>
-                      </svg>
+                    <svg class="triangle-up" width="12" height="10" viewBox="0 0 12 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.66235 0L11.1624 10L0.162354 10" />
+                    </svg>
                   </a>
                   <a class="triangle-nav" href="#">
-                    <svg class="triangle-down" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.66235 0L11.1624 10L0.162354 10"/>
-                      </svg>
+                    <svg class="triangle-down" width="12" height="10" viewBox="0 0 12 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.66235 0L11.1624 10L0.162354 10" />
+                    </svg>
                   </a>
                 </li>
               </ul>
@@ -257,152 +314,152 @@
               <ul class="gallery-list clear-list">
                 <li class="products-navigation-item">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 6000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
-                  alt="Перфоратор Bosch Bosch-BFG-6000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">30500 P.</del>
-            <a class="new-price" href="#">25500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                        alt="Перфоратор Bosch Bosch-BFG-6000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">30500 P.</del>
+                  <a class="new-price" href="#">25500 P.</a>
                 </li>
                 <li class="products-navigation-item">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 6000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
-                  alt="Перфоратор Bosch Bosch-BFG-6000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">30500 P.</del>
-            <a class="new-price" href="#">25500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                        alt="Перфоратор Bosch Bosch-BFG-6000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">30500 P.</del>
+                  <a class="new-price" href="#">25500 P.</a>
                 </li>
                 <li class="products-navigation-item new">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 6000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
-                  alt="Перфоратор Bosch Bosch-BFG-6000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">30500 P.</del>
-            <a class="new-price" href="#">25500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                        alt="Перфоратор Bosch Bosch-BFG-6000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">30500 P.</del>
+                  <a class="new-price" href="#">25500 P.</a>
                 </li>
                 <li class="products-navigation-item new">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 3000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112"
-                  alt="Перфоратор Bosch Bosch-BFG-3000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">22500 P.</del>
-            <a class="new-price" href="#">15500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112"
+                        alt="Перфоратор Bosch Bosch-BFG-3000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">22500 P.</del>
+                  <a class="new-price" href="#">15500 P.</a>
                 </li>
                 <li class="products-navigation-item">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 6000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
-                  alt="Перфоратор Bosch Bosch-BFG-6000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">30500 P.</del>
-            <a class="new-price" href="#">25500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                        alt="Перфоратор Bosch Bosch-BFG-6000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">30500 P.</del>
+                  <a class="new-price" href="#">25500 P.</a>
                 </li>
                 <li class="products-navigation-item new">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 2000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112"
-                  alt="Перфоратор Bosch Bosch-BFG-2000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">22500 P.</del>
-            <a class="new-price" href="#">12500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112"
+                        alt="Перфоратор Bosch Bosch-BFG-2000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">22500 P.</del>
+                  <a class="new-price" href="#">12500 P.</a>
                 </li>
                 <li class="products-navigation-item new">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 3000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112"
-                  alt="Перфоратор Bosch Bosch-BFG-3000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">22500 P.</del>
-            <a class="new-price" href="#">15500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_3000.jpg" width="127" height="112"
+                        alt="Перфоратор Bosch Bosch-BFG-3000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">22500 P.</del>
+                  <a class="new-price" href="#">15500 P.</a>
                 </li>
                 <li class="products-navigation-item">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 6000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
-                  alt="Перфоратор Bosch Bosch-BFG-6000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">30500 P.</del>
-            <a class="new-price" href="#">25500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_6000.jpg" width="144" height="128"
+                        alt="Перфоратор Bosch Bosch-BFG-6000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">30500 P.</del>
+                  <a class="new-price" href="#">25500 P.</a>
                 </li>
                 <li class="products-navigation-item new">
                   <h3 class="products-text">Перфоратор <span>Bosch BFG 2000</span></h3>
-            <div class="products-general-wrapper">
-              <div class="products-image-wrapper">
-                <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112"
-                  alt="Перфоратор Bosch Bosch-BFG-2000">
-              </div>
-              <div class="purchase-form">
-                <a class="products-link purchase-link" href="#">Купить</a>
-                <a class="products-link suspend-link" href="#">В закладки</a>
-              </div>
-            </div>
-            <del class="old-price">22500 P.</del>
-            <a class="new-price" href="#">12500 P.</a>
+                  <div class="products-general-wrapper">
+                    <div class="products-image-wrapper">
+                      <img src="img/products/Bosch_BFG_2000.jpg" width="127" height="112"
+                        alt="Перфоратор Bosch Bosch-BFG-2000">
+                    </div>
+                    <div class="purchase-form">
+                      <a class="products-link purchase-link" href="#">Купить</a>
+                      <a class="products-link suspend-link" href="#">В закладки</a>
+                    </div>
+                  </div>
+                  <del class="old-price">22500 P.</del>
+                  <a class="new-price" href="#">12500 P.</a>
                 </li>
               </ul>
               <ul class="gallery-pagination clear-list">
-                <li class="pagination-item">
+                <li>
                   <a class="pagination-link pagination-current">1</a>
                 </li>
-                <li class="pagination-item">
+                <li>
                   <a class="pagination-link" href="#">2</a>
                 </li>
-                <li class="pagination-item">
+                <li>
                   <a class="pagination-link" href="#">3</a>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">Следующая</a>
+                <li>
+                  <a class="pagination-link following-link" href="#">Следующая</a>
                 </li>
               </ul>
             </div>
@@ -412,15 +469,18 @@
     </div>
     <section class="main-text">
       <div class="article-wrapper">
-      <div class="container">
-        <h2 class="article-heading">Пара слов о перфораторах</h2>
-        <p class="article">
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
-        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-        </p>
+        <div class="container">
+          <h2 class="article-heading">Пара слов о перфораторах</h2>
+          <p class="article">
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+            кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+            дрели, шуруповерта и отбойного молотка.<br> 
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+            ударная дрель.
+          </p>
+        </div>
       </div>
-    </div>
     </section>
   </main>
   <footer class="main-footer">
