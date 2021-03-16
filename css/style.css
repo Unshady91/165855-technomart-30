@@ -226,6 +226,7 @@ a {
     position: absolute;
     margin-top: 11px;
     margin-left: 16px;
+    z-index: 10;
 }
 
 .icon-search path {
@@ -253,14 +254,15 @@ a {
     color: var(--basic-white);
 }
 
-.search-placeholder:focus {
+.search-placeholder:focus,
+.search-placeholder:hover,
+.search-placeholder:active + .icon-search path {
+    fill: var(--basic-red);
     background-color: var(--basic-white);
     border: none;
     outline: none;
-}
-
-input.search-placeholder:hover .icon-search path {
-    fill: var(--basic-red);
+    border-radius: 0;
+    color: var(--basic-navy-blue);
 }
 
 .focused {
@@ -480,12 +482,6 @@ input.search-placeholder:hover .icon-search path {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
-}
-
-.new {
-    background-image: url("../img/new_tag.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
 }
 
 .slider {
@@ -736,6 +732,8 @@ input.search-placeholder:hover .icon-search path {
     margin-top: 24px;
 }
 
+/* лычка new перекрывается картинкой в карточке */
+
 .products-navigation-item {
     display: flex;
     flex-direction: column;
@@ -744,6 +742,31 @@ input.search-placeholder:hover .icon-search path {
 
 .products-navigation-item:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.new {
+    background-image: url("../img/new_tag.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.products-general-wrapper, 
+.products-image-wrapper, 
+.purchase-form {
+    width:100%;
+    min-height: 170px;
+}
+
+.products-general-wrapper {
+    display: flex;
+
+}
+
+.products-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 /* Скрытые стили карточки товара */
@@ -756,7 +779,7 @@ input.search-placeholder:hover .icon-search path {
     width: 100%;
     margin: 0;
     padding-bottom: 0 10px;
-    min-height: 184px;
+    min-height: 170px;
 }
 
 .products-link {
@@ -834,23 +857,6 @@ input.search-placeholder:hover .icon-search path {
                 0.96017px -0.279415px 0px var(--basic-black), 
                 0 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 50%;
-}
-
-.products-general-wrapper, 
-.products-image-wrapper, 
-.purchase-form {
-    width:100%;
-    min-height: 170px;
-}
-
-.products-general-wrapper {
-    display: flex;
-}
-
-.products-image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Замена картинки на окно с ссылками при наведении на картинку товара */
