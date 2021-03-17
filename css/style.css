@@ -235,7 +235,7 @@ a {
 
 /* Поиск */
 
-.search-placeholder {
+.input-search {
     font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -250,19 +250,27 @@ a {
     position: relative;
 }
 
-.search-placeholder::placeholder {
+.input-search::placeholder {
     color: var(--basic-white);
 }
 
-.search-placeholder:focus,
-.search-placeholder:hover,
-.search-placeholder:active + .icon-search path {
-    fill: var(--basic-red);
+.input-search:hover,
+.input-search:focus,
+.input-search:active  {
     background-color: var(--basic-white);
     border: none;
     outline: none;
     border-radius: 0;
     color: var(--basic-navy-blue);
+}
+
+input.input-search:hover + .icon-search path {
+    fill: var(--basic-red);
+ }
+ 
+
+input.input-search:focus + .icon-search path {
+   fill: var(--basic-red);
 }
 
 .focused {
@@ -484,69 +492,58 @@ a {
     grid-gap: 20px;
 }
 
-.slider {
-    position: relative;
-    background: rgba(0, 0, 0, 0.25);
+/* Слайдер */
+
+.slider-box {
     background-color: var(--basic-grey);
-    background-image: url("../img/slider_picture.jpg");
-    background-repeat: no-repeat;
     grid-column: 1/3;
     grid-row: 2/4;
-}
-
-.slider::before {
-    content: "";
-    position: absolute;
-    top: 122px;
-    left: 24px;
-    width: 21px;
-    height: 39px;
-    background-image: url("../img/icons/icon_slide_left.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.slider-padding {
-    display: flex;
     position: relative;
-    width: 50px;
-    bottom: 19px;
-    left: 294px;
+    width: 620px;
+    height: 266px;
 }
 
-.slider-padding-item {
-    display: flex;
-    background-image: url("../img/slider-padding.png");
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
-    padding: 5px;
+.slider-list {
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
-.current-slider {
-    display: flex;
-    background-image: url("../img/current_slider.png");
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
-    padding: 5px;
+/* Слайдеры и анимация */
+
+.slide {
+    width: 100%;
+    height: 266px;
+    position: relative;
 }
 
-.slider::after {
-    content: "";
-    position: absolute;
-    top: 122px;
-    left: 574px;
-    width: 26px;
-    height: 39px;
-    background-image: url("../img/icons/icon_slide_left.svg");
+.slider-item1 {
+    background-image: url("../img/slider_perforator.jpg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-    transform: rotate(180deg);
+    z-index: 2;
 }
+
+.slider-item2 {
+    background-image: url("../img/slider_drill.jpg");
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* @keyframes slide {
+	from {
+		top: 0;
+		left: 0;
+	} */
+
+
+
+/* Стилизация слайдера */
+
+/* Верхняя шапка слайдера */
 
 .slider-content-wrapper {
     height: 104px;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .slider-heading {
@@ -574,6 +571,75 @@ a {
     padding-left: 24px;
 }
 
+/* Кнопки перелистывания слайдера */
+
+.slider-list::before {
+    content: "";
+    position: absolute;
+    top: 122px;
+    left: 24px;
+    width: 21px;
+    height: 39px;
+    background-image: url("../img/icons/icon_slide_left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 3;
+}
+
+.slider-list::after {
+    content: "";
+    position: absolute;
+    top: 122px;
+    left: 574px;
+    width: 26px;
+    height: 39px;
+    background-image: url("../img/icons/icon_slide_left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: rotate(180deg);
+    z-index: 3;
+}
+
+/* Пагинатор слайдера */
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23px;
+    height: 20px;
+    top: 190px;
+    left: 294px;
+    position: absolute;
+    z-index: 3;
+}
+
+.slider-controls button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--basic-white);
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+.slider-controls button:focus,
+.slider-controls button:active {
+    border: 1px solid var(--basic-white);
+    outline: none;
+}
+
+.slider-controls .current {
+    background-color: var(--basic-red);
+    border: 1px solid var(--basic-white);
+}
+
+/* Ссылка на каталог */
+
 .catalog-link {
     display: inline-block;
     width: 192px;
@@ -583,6 +649,8 @@ a {
     margin-top: 97px;
     box-sizing: border-box;
 }
+
+/* Остальные баннеры */
 
 .banner-box {
     font-style: normal;
@@ -738,17 +806,34 @@ a {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--basic-light-grey);
+    position: relative;
 }
 
 .products-navigation-item:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.new {
-    background-image: url("../img/new_tag.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
+.products-navigation-item .new:after {
+    content: url("../img/new_tag.svg");
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
+
+.new::after {
+    display: block;
+    content: url("../img/new_tag.svg");
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
 
 .products-general-wrapper, 
 .products-image-wrapper, 
@@ -799,17 +884,18 @@ a {
 .purchase-link {
     position: relative;
     background-color: var(--basic-green);
-    border-radius: 3px;
-    box-shadow: 0 3px 0 0 var(--basic-dark-green),
-                0 4px 4px 0 var(--basic-black);
+    border-radius: 2px;
+    box-shadow: inset 0 -3px 0 0 var(--basic-dark-green);
     color: var(--basic-white);
+    padding-left: 15px;
 }
 
 .purchase-link::before {
+    display: block;
     content: "";
     position: absolute;
     top: 10px;
-    left: 25px;
+    left: 35px;
     width: 15px;
     height: 15px;
     background-image: url("../img/icons/icon_cart.svg");
@@ -819,24 +905,25 @@ a {
 
 .purchase-link:hover {
     background-color: var(--basic-light-green);
-    box-shadow: 0 3px 0 0 var(--basic-dark-green),
-                0 4px 4px 0 var(--basic-black);
+    box-shadow: inset 0 -3px 0 0 var(--basic-dark-green);
 }
 
 .purchase-link:active,
 .purchase-link:focus {
     background-color: var(--basic-focus-green);
-    box-shadow: 0 3px 0 0 var(--basic-dark-green);
+    box-shadow: inset 0 -3px 0 0 var(--basic-dark-green);
 }
 
 .suspend-link {
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-navy-blue);
     background-color: var(--basic-white);
     border: 3px solid var(--basic-green);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .suspend-link:hover {
@@ -845,19 +932,14 @@ a {
 }
 
 .suspend-link:active {
-    color: rgba(50, 66, 92, 0.5);
-    border: 3px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
-    text-shadow: 1px 0px 0px var(--basic-black),
-                0.540302px 0.841471px 0px var(--basic-black),
-                -0.416147px 0.909297px 0px var(--basic-black),
-                -0.989992px 0.14112px 0px var(--basic-black),
-                -0.653644px -0.756802px 0px var(--basic-black),
-                0.283662px -0.958924px 0px var(--basic-black),
-                0.96017px -0.279415px 0px var(--basic-black), 
-                0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 3px solid var(--basic-navy-blue);
     opacity: 50%;
 }
+
+.suspend-text:active {
+    -webkit-text-stroke: 1px black;
+}
+
 
 /* Замена картинки на окно с ссылками при наведении на картинку товара */
 
@@ -883,6 +965,7 @@ a {
     order: 1;
     padding-left: 25px;
     padding-right: 25px;
+    color: var(--basic-black);
 }
 
 .products-text span {
@@ -898,6 +981,12 @@ a {
     align-self: center;
     margin-top: 8px;
     color: var(--basic-grey);
+    order: 2;
+}
+
+.hidden-price {
+    display: block;
+    margin-top: 25px;
     order: 2;
 }
 
@@ -1898,6 +1987,7 @@ a {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.3);
     text-decoration: underline dotted var(--basic-red);
+    text-underline-offset: 2px;
 }
 
 .arrangement-list li:nth-child(2) {
@@ -2064,8 +2154,13 @@ a {
     justify-content: space-between;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button  {
+    -webkit-appearance: none; /* Webkit and Geko fix*/
     appearance: none;
+}
+
+input[type="number"]  {
+    -moz-appearance: textfield; /* Geko fix */
 }
 
 .price-controls label {
