@@ -28,7 +28,6 @@
     url("../fonts/cuprumbold.woff") format("woff");
 }
 
-
 @font-face {
     font-family: "PT Sans Bold";
     font-weight: 700;
@@ -236,7 +235,6 @@ a {
 /* Поиск */
 
 .input-search {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -273,11 +271,11 @@ input.input-search:focus + .icon-search path {
    fill: var(--basic-red);
 }
 
-.focused {
+.item-added {
     background-color: var(--basic-green);
 }
 
-.focused:hover {
+.item-added:hover {
     background-color: var(--basic-light-green);
 }
 
@@ -518,24 +516,18 @@ input.input-search:focus + .icon-search path {
 }
 
 .slider-item1 {
+
     background-image: url("../img/slider_perforator.jpg");
     background-repeat: no-repeat;
     z-index: 2;
 }
 
 .slider-item2 {
+    display: none;
     background-image: url("../img/slider_drill.jpg");
     background-repeat: no-repeat;
     z-index: 2;
 }
-
-/* @keyframes slide {
-	from {
-		top: 0;
-		left: 0;
-	} */
-
-
 
 /* Стилизация слайдера */
 
@@ -573,31 +565,38 @@ input.input-search:focus + .icon-search path {
 
 /* Кнопки перелистывания слайдера */
 
-.slider-list::before {
-    content: "";
+.slider-buttons-wrapper {
     position: absolute;
-    top: 122px;
-    left: 24px;
-    width: 21px;
-    height: 39px;
-    background-image: url("../img/icons/icon_slide_left.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    z-index: 3;
+    display: flex;
+    width: 590px;
+    height: 80px;
+    top: 90px;
+    left: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
 }
 
-.slider-list::after {
-    content: "";
-    position: absolute;
-    top: 122px;
-    left: 574px;
-    width: 26px;
-    height: 39px;
+.slide-button {
+    display: block;
+    border: none;
+    width: 22px;
+    height: 40px;
+    background: transparent;
+    background-color: transparent;
     background-image: url("../img/icons/icon_slide_left.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-    transform: rotate(180deg);
+    background-position: center;
     z-index: 3;
+    cursor: pointer;
+}
+
+.slide-button:focus {
+    outline: none;
+}
+
+.slide-right {
+    transform: rotate(180deg);
 }
 
 /* Пагинатор слайдера */
@@ -624,7 +623,6 @@ input.input-search:focus + .icon-search path {
     padding: 0;
     box-sizing: border-box;
     cursor: pointer;
-
 }
 
 .slider-controls button:focus,
@@ -760,7 +758,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .popular-headlines {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -1028,6 +1025,7 @@ input.input-search:focus + .icon-search path {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--basic-light-grey);
+    object-fit: inherit;
 }
 
 .brands-navigation-item:hover {
@@ -1042,15 +1040,27 @@ input.input-search:focus + .icon-search path {
 
 /* --------Сервисы---------- */
 
+.services-wrapper {
+    background-color: var(--basic-soft-grey);
+    margin-top: 70px;
+}
+
 .services-navigation-list {
     position: relative;
-    margin-top: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-navigation-list li {
+    margin-right: 50px;
+    margin-bottom: 70px;
 }
 
 .services-navigation-list:after {
     content: "";
     position: absolute;
-    top: -60px;
+    top: 30px;
     left: 230px;
     width: 10px;
     height: 268px;
@@ -1059,19 +1069,34 @@ input.input-search:focus + .icon-search path {
     background-position: 0 0;
 }
 
-.services-wrapper {
-    background-color: var(--basic-soft-grey);
-    margin-top: 70px;
+/* Выпадающее меню */
+
+.services-content {
+    width: 620px;
 }
 
-.services-grid-container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    padding-top: 70px;
+.content-item {
+    width: 100%;
 }
+
+.delivery-content {
+    display: none;
+}
+
+.credit-content {
+    display: none;
+}
+
+.guarantee-content {
+    display: none;
+}
+
+.current-content {
+    display: block;
+}
+
 
 .services-headlines {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -1097,15 +1122,41 @@ input.input-search:focus + .icon-search path {
     margin: 0;
 }
 
+.services-content .headlines {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-navy-blue);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
 .delivery-content {
-    background-image: url("../img/delivery.png");
+    background-image: url("../img/services_delivery_bg.png");
     background-repeat: no-repeat;
     background-size: 468px 261px;
-    background-position: 221px 51px;
-    padding-bottom: 130px;
-    padding-left: 70px;
-    margin-top: -45px;
+    background-position: 128px 0;
 }
+
+.guarantee-content {
+    background-image: url("../img/services_guarantee_bg.png");
+    background-repeat: no-repeat;
+    background-position: 50px 0;
+    background-size: cover;
+}
+
+.credit-content {
+    background-image: url("../img/services_credit_bg.png");
+    background-repeat: no-repeat;
+    background-position: 50px 0;
+    background-size: cover;
+
+}
+
+
+/* Кнопки в меню сервисы */
 
 .button {
     background-color: var(--basic-navy-blue);
@@ -1113,13 +1164,20 @@ input.input-search:focus + .icon-search path {
     border-bottom: 1px solid var(--basic-dark-blue);
     color: var(--basic-white);
     border-left: 1px solid var(--basic-inner-shadow-blue);;
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 21px;
     line-height: 30px;
     width: 240px;
     text-align: initial;
+}
+
+.services-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 183;
+    margin-top: 70px;
 }
 
 .button-delivery {
@@ -1144,7 +1202,7 @@ input.input-search:focus + .icon-search path {
 }
 
 .button:hover,
-.button:active {
+.button:focus {
     background-color: var(--basic-hover-blue);
     border-left: 1px solid var(--basic-inner-shadow-blue);
     border: 1px solid var(--basic-inner-shadow-blue);
@@ -1159,21 +1217,9 @@ input.input-search:focus + .icon-search path {
     border: 1px solid var(--basic-white);
 }
 
-.delivery-content .headlines {
-    font-family: "Cuprum", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 30px;
-    color: var(--basic-navy-blue);
-    display: inline-block;
-    text-transform: uppercase;
-}
-
 /* abouts */
 
 .abouts .headlines {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -1183,7 +1229,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .company-navigation-list {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1559,7 +1604,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .footer-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1569,7 +1613,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .top-nav-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1588,7 +1631,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .bot-nav-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1645,7 +1687,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .copyright-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1725,7 +1766,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .footer-bot-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1740,7 +1780,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .bot-text {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1792,7 +1831,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .user-profile {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
@@ -1809,7 +1847,6 @@ input.input-search:focus + .icon-search path {
 
 .my-orders,
 .my-account {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1932,7 +1969,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .title {
-    font-family: "Cuprum", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
@@ -2065,15 +2101,15 @@ input.input-search:focus + .icon-search path {
  /* Фильтр */
 
 .filter-item {
-    margin: 0;
-    padding: 0;
-    border: none;
     font-family: "PT Sans", Arial, sans-serif;  
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .filter-item legend {
@@ -2428,7 +2464,6 @@ input[type="number"]  {
 }
 
 .article-heading {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;

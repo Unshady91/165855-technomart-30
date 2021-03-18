@@ -55,7 +55,7 @@
                   Корзина: 0
                 </a>
               </li>
-              <li class="focused">
+              <li class="item-added">
                 <a class="menu-link" href="#">Оформить заказ</a>
               </li>
             </ul>
@@ -175,24 +175,28 @@
             </li>
             <li class="slider-box">
               <ul class="slider-list clear-list">
-                <!-- <li class="slider-item1 slide slide-current">
+                <li class="slider-item1 slide slide-current">
                   <div class="slider-content-wrapper">
                     <h3 class="slider-heading">Перфораторы</h3>
                     <p class="slider-text">Настоящие мужские игрушки</p>
                   </div>
                   <a class="more-link catalog-link" href="catalog.html">Открыть каталог</a>
-                </li> -->
+                </li>
                 <li class="slider-item2 slide">
                   <div class="slider-content-wrapper">
                     <h3 class="slider-heading">Дрели</h3>
                     <p class="slider-text">Соседям на радость</p>
                   </div>
                   <a class="more-link catalog-link" href="catalog.html">Открыть каталог</a>
-                  </li>
+                </li>
               </ul>
               <div class="slider-controls">
                 <button type="button" aria-label="Первый слайд"></button>
                 <button class="current" type="button" aria-label="Второй слайд"></button>
+              </div>
+              <div class="slider-buttons-wrapper">
+                <button class="slide-button slide-left" type="button" aria-label="Слайд влево"></button>
+                <button class="slide-button slide-right" type="button" aria-label="Слайд вправо"></button>
               </div>
             </li>
             <li class="banner-box banner-discounts">
@@ -343,32 +347,46 @@
       <div class="services-wrapper">
         <div class="container">
           <h3 class="services-headlines">Сервисы</h3>
-          <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services-grid-container">
-            <div class="services-menu">
+          <p class="text">
+            Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
               <ul class="services-navigation-list clear-list">
-                <li class="services-navigation-item">
+                <li class="services-buttons">
                   <button class="button button-delivery">Доставка</button>
-                </li>
-                <li class="services-navigation-item">
                   <button class="button button-warranty">Гарантия</button>
-                </li>
-                <li class="services-navigation-item">
                   <button class="button button-loans">Кредит</button>
                 </li>
+                <li class="services-content">
+                  <div class="content-item delivery-content current-content">
+                    <h3 class="headlines">Доставка</h3>
+                    <p class="delivery-text text">
+                      Мы с удовольствием доставим ваш товар прямо
+                      к вашему подъезду совершенно бесплатно!<br>
+                      Ведь мы неплохо заработаем,<br>
+                      поднимая его на ваш этаж!
+                    </p>
+                  </div>
+                  <div class="content-item guarantee-content">
+                    <h3 class="headlines">Гарантия</h3>
+                    <p class="delivery-text text">
+                      Если купленный у нас товар поломается или заискрит,<br>
+                      а также в случае пожара, спровоцированного его<br>
+                      возгоранием,  вы всегда можете быть уверены в нашей<br>
+                      гарантии. Мы обменяем сгоревший товар на новый.<br>
+                      Дом уж восстановите как-нибудь сами.
+                    </p>
+                  </div>
+                  <div class="content-item credit-content">
+                    <h3 class="headlines">Кредит</h3>
+                    <p class="delivery-text text">
+                      Залезть в долговую яму стало проще! 
+                      Кредитные консультанты придут вам на помощь.
+                    </p>
+                  </div>
+                  
+                </li>
               </ul>
-            </div>
-            <div class="delivery-content">
-              <h3 class="headlines">Доставка</h3>
-              <p class="delivery-text text">
-                Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем,<br>
-                поднимая его на ваш этаж!
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -402,14 +420,16 @@
           </div>
           <div class="abouts-columns">
             <h2 class="headlines">Контакты</h2>
-
-            <p class="feedback-text text">Вы можете забрать товар сами, заехав в наш офис:</p>
-
+            <p class="feedback-text text">
+              Вы можете забрать товар сами, заехав в наш офис:
+            </p>
             <a href="#">
               <img src="img/map.png" width="300" height="158"
                 alt="Карта расположения Техномарта. Большая Конюшенная ул.19">
             </a>
-            <a class="more-link feedback-link" href="#">Заблудились? Напишите нам!</a>
+            <a class="more-link feedback-link" href="#">
+              Заблудились? Напишите нам!
+            </a>
           </div>
           <div class="main-feedback-form">
             <svg class="popup_close" width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -545,7 +565,7 @@
                 </li>
                 <li class="footer-feedback-item">
                   <p class="footer-bot-text">Разработано -</p>
-                  <a class="bot-text" href="https://www.htmlacademy.ru">htmlacademy.ru</a>
+                  <a class="bot-text" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                 </li>
               </ul>
             </div>
@@ -553,8 +573,6 @@
         </div>
       </div>
     </section>
-
   </footer>
 </body>
-
 </html>
