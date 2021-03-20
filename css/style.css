@@ -1984,6 +1984,7 @@ input.input-search:focus + .icon-search path {
 
 .breadcrumbs-item a {
     all: inherit;
+    color: var(--basic-black);
     padding-left: 0;
 }
 
