@@ -196,7 +196,7 @@ a {
     padding-right: 15px;
 }
 
-.user-navigation-item a:hover {
+.user-navigation-item a:active {
     background-color: var(--basic-click-blue);
 }
 
@@ -885,7 +885,6 @@ input.input-search:focus + .icon-search path {
     z-index: 99;
 }
 
-
 .products-general-wrapper,
 .products-image-wrapper,
 .purchase-form {
@@ -895,7 +894,6 @@ input.input-search:focus + .icon-search path {
 
 .products-general-wrapper {
     display: flex;
-
 }
 
 .products-image-wrapper {
@@ -921,7 +919,6 @@ input.input-search:focus + .icon-search path {
     text-transform: uppercase;
     color: var(--basic-white);
     text-align: center;
-    text-transform: uppercase;
     width: 135px;
     box-sizing: border-box;
 }
@@ -967,14 +964,12 @@ input.input-search:focus + .icon-search path {
 }
 
 .purchase-link:hover {
-    background-color: var(--basic-light-green);
-    box-shadow: inset 0 -3px 0 0 var(--basic-dark-green);
+    background-color: var(--basic-hover-green);
 }
 
 .purchase-link:active,
 .purchase-link:focus {
     background-color: var(--basic-focus-green);
-    box-shadow: inset 0 -3px 0 0 var(--basic-dark-green);
 }
 
 .suspend-link:hover {
@@ -991,14 +986,13 @@ input.input-search:focus + .icon-search path {
     -webkit-text-stroke: 1px var(--basic-black);
 }
 
-
 /* Замена картинки на окно с ссылками при наведении на картинку товара */
 
-.products-general-wrapper:hover .products-image-wrapper {
+.products-navigation-item:hover .products-image-wrapper {
     display: none;
 }
 
-.products-general-wrapper:hover .purchase-form  {
+.products-navigation-item:hover .purchase-form  {
     display: flex;
 }
 
@@ -1362,8 +1356,9 @@ input.input-search:focus + .icon-search path {
 .cart-items-form {
     display: none;
     position: fixed;
-    top: 100px;
-    left: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 620px;
     height: max-content;
     margin: 0;
@@ -1472,12 +1467,13 @@ input.input-search:focus + .icon-search path {
 /* Фидбэк форма  */
 
 .main-feedback-form {
-    display: none;
     position: fixed;
+    display: none;
     width: 620px;
     height: min-content;
-    top: 155px;
-    left: 634px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-top: 7px solid var(--basic-red);
     box-shadow: 0 4px 4px 0 var(--basic-black-form-rgb),
                 0 4px 4px 0 var(--basic-black-half-rgb);
@@ -1626,8 +1622,9 @@ input.input-search:focus + .icon-search path {
 .map-popup {
     display: none;
     position: fixed;
-    top: 155px;
-    left: 474px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 940px;
     height: 445px;
     margin: 0;
@@ -1637,13 +1634,13 @@ input.input-search:focus + .icon-search path {
                 0 4px 4px 0 var(--basic-black-half-rgb);
     background-image: url("../img/map_popup.png");
     background-repeat: no-repeat;
+    z-index: 100;
 }
 
 .map-close  {
     float: right;
     padding: 10px 10px 0px 0;
 }
-
 
 /* ------------Footer-------------- */
 
@@ -2093,13 +2090,14 @@ input.input-search:focus + .icon-search path {
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-grey-soft-rgb);
-    text-decoration: underline dotted var(--basic-red);
+    border-bottom: 1px dotted var(--basic-red);
     text-underline-offset: 3px;
 }
 
 .arrangement-list li:first-child a {
     color: var(--basic-red);
     text-decoration: none;
+    border-bottom: none;
 }
 
 .arrangement-list li:nth-child(2) {
@@ -2110,15 +2108,14 @@ input.input-search:focus + .icon-search path {
     padding-left: 25px;
 }
 
-
 .arrangement-item:hover {
     color: var(--basic-black);
-    text-decoration: underline solid var(--basic-red);
+    border-bottom: 1px solid var(--basic-red);
 }
 
 .arrangement-item:active {
     color: var(--basic-red);
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .triangle-nav path {
@@ -2484,8 +2481,13 @@ input[type="number"] {
     padding-bottom: 9px;
 }
 
+.filter-button:hover {
+    border: 1px solid var(--basic-grey-auth);
+}
+
 .filter-button:focus,
 .filter-button:active {
+    border: 1px solid var(--basic-red);
     color: var(--basic-black);
     outline: none;
 }
