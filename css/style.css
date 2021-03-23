@@ -3,56 +3,56 @@
 
 @font-face {
     font-family: "Cuprum";
+    src:
+    url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-    src:
-    url("../fonts/cuprum.woff2") format("woff2"), 
-    url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
     font-family: "PT Sans";
-    font-weight: 400;
-    font-style: normal;
-    src: 
+    src:
     url("../fonts/ptsans.woff2") format("woff2"),
     url("../fonts/ptsans.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Cuprum Bold";
-    font-weight: 700;
-    font-style: normal;
-    src: 
+    font-family: "Cuprum";
+    src:
     url("../fonts/cuprumbold.woff2") format("woff2"),
     url("../fonts/cuprumbold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "PT Sans Bold";
     font-weight: 700;
     font-style: normal;
-    src: 
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src:
     url("../fonts/ptsansbold.woff2") format("woff2"),
     url("../fonts/ptsansbold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Cuprum Italic";
-    font-weight: 400;
-    font-style: italic;
-    src: 
+    font-family: "Cuprum";
+    src:
     url("../fonts/cuprumitalic.woff2") format("woff2"),
     url("../fonts/cuprumitalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
-    font-family: "Cuprum Bold Italic";
+    font-family: "Cuprum";
+    src:
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
     font-weight: 700;
     font-style: italic;
-    src: 
-    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("../fonts/cuprumbolditalic.woff") format("woff"); 
 }
 
 /*Конец раздела подключения шрифтов*/
@@ -67,20 +67,19 @@
     --basic-hover-blue: #293449;
     --basic-extra-blue: #3D546F;
     --basic-dark-blue: #212A3A;
-    --basic-ultra-dark-blue: #161D29;
     --basic-click-blue: #1D2739;
     --basic-white: #FFFFFF;
     --basic-green: #63A63E;
-    --basic-light-green: #5FBB2D;
+    --basic-green-bar: #00c873;
     --basic-focus-green: #518534;
     --basic-dark-green: #367315;
     --basic-orange: #FFBF47;
-    --basic-orange: #FFC047;
     --basic-yellow: #FFD180;
     --basic-milk: #F9F5F0;
     --basic-blue: #3BBCE3;
     --basic-pink: #DC91D8;
     --basic-light-green: #8ED78F;
+    --basic-hover-green: #5FBB2D;
     --basic-grey: #A9A9A9;
     --basic-light-grey: #EAEAEA;
     --basic-black: #000000;
@@ -172,62 +171,103 @@ a {
 
 .user-navigation {
     display: flex;
+    justify-content: flex-start;
     width: 100%;
     height: 42px;
-    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 .user-navigation-list {
     display: flex;
-    width: 450px;
     justify-content: flex-end;
+    align-items: center;
+    width: 450px;
 }
 
 .user-navigation-list li {
     position: relative;
+    display: flex;
+}
+
+.user-navigation-list a {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    width: 150px;
     text-align: center;
-    padding-top: 6px;
+    position: relative;
 }
 
-.user-navigation-item {
-    flex-grow: 2;
+.position-fix {
+    /* padding-left: 5px; */
 }
 
-.user-bookmark {
-    flex-grow: 3;
-}
-
-.user-navigation-item:hover {
+.user-navigation-item a:hover {
     background-color: var(--basic-click-blue);
 }
 
+.menu-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--basic-light-grey);
+}
+
+
+
 .item-added {
     background-color: var(--basic-green);
-    min-width: 150px;
+    width: 150px;
 }
 
 .item-added:hover {
-    background-color: var(--basic-light-green);
+    background-color: var(--basic-hover-green);
 }
 
-.bookmark-link {
-    position: relative;
+.item-added:active {
+    background-color: var(--basic-green);
+    color: var(--basic-white);
+    opacity: 0.5;
 }
 
-.cart-link {
-    position: relative;
+.icon-bookmark {
+    position: absolute;
+    top: 12px;
+    left: 8px;
 }
 
-.cart-item-added {
-    margin-left: 18px;
+.icon-bookmark path {
+    fill: var(basic-white);
+    opacity: 0.3;
 }
 
-/* Пользовательское меню страницы каталог*/
+.bookmark-link:hover .icon-bookmark path {
+    fill: var(--basic-white);
+    opacity: 1;
+}
+
+.icon-cart {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.icon-cart path {
+    fill: var(--basic-black);
+    opacity: 0.3;
+}
+
+.cart-link:hover .icon-cart path {
+    fill: var(--basic-white);
+    opacity: 1;
+}
+
+/* Пользовательское меню страницы каталог */
 
 .inner-page-cart {
     background-color: var(--basic-red);
-    min-width: 136px;
+    width: 136px;
 }
+
 
 /* Обертка для логотипа шапки */
 
@@ -242,8 +282,8 @@ a {
 }
 
 .main-header-logo:active {
-    box-shadow: inset 0 48px 0 rgba(0, 0, 0, 0.24),
-                0 5px 0 var(--basic-click-red);
+    background-color: var(--basic-click-red);
+    box-shadow: 0 5px 0 var(--basic-click-red);
 }
 
 .main-header-logo img {
@@ -268,7 +308,8 @@ a {
 }
 
 .icon-search path {
-    fill: rgba(255, 255, 255, 0.3);
+    fill: var(--basic-white);
+    opacity: 0.3;
 }
 
 /* Поиск */
@@ -278,7 +319,6 @@ a {
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    color: var(--basic-black);
     width: 100%;
     height: 42px;
     background-color: var(--basic-navy-blue);
@@ -287,13 +327,8 @@ a {
     position: relative;
 }
 
-.input-search::placeholder {
-    color: var(--basic-white);
-}
-
-.input-search:hover,
 .input-search:focus,
-.input-search:active  {
+.input-search:active {
     background-color: var(--basic-white);
     border: none;
     outline: none;
@@ -301,49 +336,38 @@ a {
     color: var(--basic-navy-blue);
 }
 
+.input-search::-webkit-input-placeholder {
+    color: var(--basic-white);
+}
+
+.input-search:hover::-webkit-input-placeholder {
+    color: var(--basic-white);
+}
+
+.input-search:focus::-webkit-input-placeholder {
+    color: var(--basic-navy-blue);
+}
+
+.input-search:-moz-placeholder {
+    color: var(--basic-white);
+}
+
+.input-search:hover:-moz-placeholder {
+    color: var(--basic-white);
+}
+
+.input-search:focus:-moz-placeholder {
+    color: var(--basic-navy-blue);
+}
+
 input.input-search:hover + .icon-search path {
-    fill: var(--basic-red);
- }
- 
+    fill: var(--basic-white);
+    opacity: 1;
+}
 
 input.input-search:focus + .icon-search path {
-   fill: var(--basic-red);
-}
-
-.menu-link {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 30px;
-    color: var(--basic-light-grey);
-}
-
-.icon-bookmark {
-    position: absolute;
-    top: 3px;
-    left: -23px;
-}
-
-.icon-bookmark path {
-    fill: rgba(255, 255, 255, 0.3);
-}
-
-.bookmark-link:hover .icon-bookmark path {
-    fill: rgba(255, 255, 255, 1);
-}
-
-.icon-cart {
-    position: absolute;
-    top: 3px;
-    left: -23px;
-}
-
-.icon-cart path {
-    fill:rgba(255, 255, 255, 0.3);
-}
-
-.cart-link:hover .icon-cart path {
-    fill: rgba(255, 255, 255, 1);
+    fill: var(--basic-red);
+    opacity: 1;
 }
 
 /* Адрес, контакты, вход */
@@ -358,7 +382,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .info-text {
-    font-family: "Cuprum Italic", Arial, sans-serif;
     font-style: Italic;
     font-size: 16px;
     line-height: 23px;
@@ -372,7 +395,7 @@ input.input-search:focus + .icon-search path {
 
 .contacts-number {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
@@ -386,7 +409,7 @@ input.input-search:focus + .icon-search path {
     padding-top: 4px;
     padding-bottom: 5px;
     padding-left: 71px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     background-image: url("../img/icons/icon_phone_number.svg");
     background-repeat: no-repeat;
     background-position: 36px 10px;
@@ -394,7 +417,7 @@ input.input-search:focus + .icon-search path {
 
 .contacts-address {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 14px;
     color: var(--basic-navy-blue);
@@ -407,7 +430,7 @@ input.input-search:focus + .icon-search path {
 .auth-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     margin-bottom: 25px;
 }
 
@@ -415,7 +438,7 @@ input.input-search:focus + .icon-search path {
 .registration-link {
     background-color: var(--basic-white);
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
@@ -497,6 +520,7 @@ input.input-search:focus + .icon-search path {
 
 .main-navigation-item:active {
     background-color: var(--basic-click-blue);
+    opacity: 0.5;
 }
 
 /*------------Мейн------------*/
@@ -514,10 +538,10 @@ input.input-search:focus + .icon-search path {
 /* Слайдер */
 
 .slider-box {
-    background-color: var(--basic-grey);
     grid-column: 1/3;
     grid-row: 2/4;
     position: relative;
+    background-color: var(--basic-grey);
     width: 620px;
     height: 266px;
 }
@@ -537,7 +561,7 @@ input.input-search:focus + .icon-search path {
 }
 
 .slider-item1 {
-
+    display: block;
     background-image: url("../img/slider_perforator.jpg");
     background-repeat: no-repeat;
     z-index: 2;
@@ -556,11 +580,9 @@ input.input-search:focus + .icon-search path {
 
 .slider-content-wrapper {
     height: 104px;
-    background: rgba(0, 0, 0, 0.25);
 }
 
 .slider-heading {
-    font-family: "Cuprum Bold", Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -856,8 +878,8 @@ input.input-search:focus + .icon-search path {
 }
 
 
-.products-general-wrapper, 
-.products-image-wrapper, 
+.products-general-wrapper,
+.products-image-wrapper,
 .purchase-form {
     width:100%;
     min-height: 170px;
@@ -877,7 +899,7 @@ input.input-search:focus + .icon-search path {
 
 /* Скрытые стили карточки товара */
 
-.purchase-form  {
+.purchase-form {
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -977,7 +999,7 @@ input.input-search:focus + .icon-search path {
 .products-text {
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 20px;
     text-align: center;
@@ -996,7 +1018,7 @@ input.input-search:focus + .icon-search path {
 .old-price {
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 17px;
     line-height: 18px;
     align-self: center;
@@ -1020,7 +1042,7 @@ input.input-search:focus + .icon-search path {
     height: 38px;
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 17px;
     line-height: 18px;
     box-sizing: border-box;
@@ -1045,14 +1067,19 @@ input.input-search:focus + .icon-search path {
 }
 
 .brands-navigation-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 1px solid var(--basic-light-grey);
     object-fit: inherit;
 }
 
-.brands-navigation-item:hover {
+.brands-navigation-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 145px;
+}
+
+.brands-navigation-item a:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -1074,7 +1101,7 @@ input.input-search:focus + .icon-search path {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    
+
 }
 
 .services-navigation-list li {
@@ -1113,7 +1140,6 @@ input.input-search:focus + .icon-search path {
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    font-weight: 30px;
     text-transform: uppercase;
     padding-top: 62px;
     margin-bottom: 23px;
@@ -1187,7 +1213,7 @@ input.input-search:focus + .icon-search path {
     border-top: 1px solid var(--basic-inner-shadow-blue);
     border-bottom: 1px solid var(--basic-dark-blue);
     color: var(--basic-white);
-    border-left: 1px solid var(--basic-inner-shadow-blue);;
+    border-left: 1px solid var(--basic-inner-shadow-blue);
     font-style: normal;
     font-weight: 700;
     font-size: 21px;
@@ -1211,6 +1237,18 @@ input.input-search:focus + .icon-search path {
     padding-right: 40px;
 }
 
+.button-current-slide {
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-white);
+    color: var(--basic-navy-blue);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    width: 240px;
+    text-align: initial;
+}
+
 .button-warranty {
     padding-top: 12px;
     padding-left: 21px;
@@ -1225,20 +1263,28 @@ input.input-search:focus + .icon-search path {
     padding-right: 40px;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     background-color: var(--basic-hover-blue);
     border-left: 1px solid var(--basic-inner-shadow-blue);
     border: 1px solid var(--basic-inner-shadow-blue);
     border-bottom: 1px solid var(--basic-dark-blue);
-    outline: none;
+    /* outline: none; */
     color: var(--basic-white);
 }
 
+.button:focus,
+.button:active {
+    box-shadow: 0px 1px 0px #293449,
+                inset 0px 1px 0px #405069;
+    outline: none;
+}
+
+.button-delivery:focus,
 .button-delivery:active {
     background-color: var(--basic-white);
     color: var(--basic-navy-blue);
     border: 1px solid var(--basic-white);
+    outline: none;
 }
 
 /* abouts */
@@ -1254,7 +1300,7 @@ input.input-search:focus + .icon-search path {
 
 .company-navigation-list {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 18px;
     padding-left: 38px;
@@ -1416,7 +1462,6 @@ input.input-search:focus + .icon-search path {
 
 .shop-link {
     background-color: var(--basic-white);
-    /* margin-right: 18px; */
 }
 
 .cart-submit-link:hover {
@@ -1485,14 +1530,13 @@ input.input-search:focus + .icon-search path {
 }
 
 .feedback-labels {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
 }
 
-.feedback-textarea { 
+.feedback-textarea {
     display: block;
     width: 460px;
     min-height: 115px;
@@ -1549,7 +1593,6 @@ input.input-search:focus + .icon-search path {
 }
 
 .feedback-submit {
-    font-family: "Cuprum", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -1782,7 +1825,7 @@ input.input-search:focus + .icon-search path {
 
 .bot-col3 {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .footer-feedback-list {
@@ -1790,7 +1833,6 @@ input.input-search:focus + .icon-search path {
     margin-top: 34px;
     margin-left: 15px;
 }
-
 
 .footer-feedback-list li:last-of-type {
     margin-left: 51px;
@@ -1881,6 +1923,7 @@ input.input-search:focus + .icon-search path {
     margin: 0;
     padding: 0;
 }
+
 .my-orders {
     padding-right: 24px;
     margin-left: 15px;
@@ -1908,8 +1951,16 @@ input.input-search:focus + .icon-search path {
     fill: var(--basic-grey-auth);
 }
 
-.icon-user:hover path {
+.user-profile:hover .icon-user path {
     fill: var(--basic-extra-blue);
+}
+
+.user-profile:active {
+    color: var(--basic-grey-auth);
+}
+
+.user-profile:active .icon-user path {
+    fill: var(--basic-grey-auth);
 }
 
 .icon-logout path {
@@ -1938,10 +1989,6 @@ input.input-search:focus + .icon-search path {
 
 .my-account:hover {
     color: var(--basic-red);
-}
-
-.user-profile:active {
-    color: var(--basic-grey-auth);
 }
 
 .my-orders:active {
@@ -1982,11 +2029,7 @@ input.input-search:focus + .icon-search path {
     position: relative;
 }
 
-.breadcrumbs-item a {
-    all: inherit;
-    color: var(--basic-black);
-    padding-left: 0;
-}
+
 
 .breadcrumbs-item:before {
     position: absolute;
@@ -2052,9 +2095,14 @@ input.input-search:focus + .icon-search path {
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(var(--basic-black), 0.3);
     text-decoration: underline dotted var(--basic-red);
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
+}
+
+.arrangement-list li:first-child a {
+    color: var(--basic-red);
+    text-decoration: none;
 }
 
 .arrangement-list li:nth-child(2) {
@@ -2078,6 +2126,10 @@ input.input-search:focus + .icon-search path {
 
 .triangle-nav path {
     fill: var(--basic-grey-auth);
+}
+
+.triangle-up path {
+    fill: var(--basic-red);
 }
 
 .triangle-down {
@@ -2132,7 +2184,7 @@ input.input-search:focus + .icon-search path {
  /* Фильтр */
 
 .filter-item {
-    font-family: "PT Sans", Arial, sans-serif;  
+    font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -2190,7 +2242,7 @@ input.input-search:focus + .icon-search path {
 .range-controls .bar {
     width: 80%;
     height: 2px;
-    background-color: var(--basic-green);
+    background-color: var(--basic-green-bar);
 }
 
 .range-controls .toggle {
@@ -2210,7 +2262,7 @@ input.input-search:focus + .icon-search path {
 .range-controls .toggle-min {
     left: 18px;
 }
-  
+
 .range-controls .toggle-max {
     left: 160px;
 }
@@ -2222,12 +2274,12 @@ input.input-search:focus + .icon-search path {
 }
 
 input[type="number"]::-webkit-inner-spin-button  {
-    -webkit-appearance: none; /* Webkit and Geko fix*/
+    -webkit-appearance: none;
     appearance: none;
 }
 
-input[type="number"]  {
-    -moz-appearance: textfield; /* Geko fix */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .price-controls label {
@@ -2261,7 +2313,7 @@ input[type="number"]  {
     left: 107px;
 }
 
-/* Производители чекбоксы  */
+/* Производители чекбоксы */
 
 .filter-brands legend {
     padding-top: 15px;
@@ -2316,14 +2368,14 @@ input[type="number"]  {
     background-repeat: no-repeat;
 }
 
-/* disabled  */
+/* disabled */
 
 .input-checkbox:disabled + .check {
     background-image: url("../img/icons/checkbox_disabled.svg");
     background-repeat: no-repeat;
 }
 
-/* Checked Disabled  */
+/* Checked Disabled */
 
 .input-checkbox:checked:disabled + .check {
     background-image: url("../img/icons/checkbox_checked_disabled.svg");
@@ -2372,7 +2424,7 @@ input[type="number"]  {
     border-color: #b5b5b5;
 }
 
-/* Радиокнопка. Состояние checked  */
+/* Радиокнопка. Состояние checked */
 
 .input-radio:checked + .radio-icon .radio-on {
     position: absolute;
@@ -2406,7 +2458,7 @@ input[type="number"]  {
     opacity: 0.4;
 }
 
-/* Радиокнопка. Состояние checked + disabled  */
+/* Радиокнопка. Состояние checked + disabled */
 
 .input-radio:checked:disabled + .radio-icon .radio-on {
     position: absolute;
@@ -2435,12 +2487,13 @@ input[type="number"]  {
     padding-bottom: 9px;
 }
 
-.filter-button:focus {
+.filter-button:focus,
+.filter-button:active {
+    color: var(--basic-black);
     outline: none;
-    color: red;
 }
 
-/* Пагинация  */
+/* Пагинация */
 
 .gallery-pagination {
     display: flex;
@@ -2475,6 +2528,7 @@ input[type="number"]  {
 
 .pagination-current {
     border: 1px solid var(--basic-red);
+    border-radius: 2px;
     background-color: var(--basic-red);
     color: var(--basic-white);
 }
